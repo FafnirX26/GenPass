@@ -1,7 +1,6 @@
-import string, random, pyperclip
+import string, random
 
 print("Welcome to GenPass\n")
-should_be_copied = input("Would you like to use the copy feature? (It might not work) [y/n]: ")
 
 def gen_password(length):
     password = ''
@@ -16,10 +15,10 @@ def gen_password(length):
     return password
     
 try:
-    print('We recommend using 8+ characters in a password, but it is up to you')
+    print('It is recommend to use 8+ characters in a password, but it is up to you')
     dl = int(input('How many letters do you need in your password: '))
     if dl < 8:
-        confirmed = input('You have selected a length below our recommended length. Are you sure you want to continue? [y/n]: ')
+        confirmed = input('You have selected a length below the recommended length. Are you sure you want to continue? [y/n]: ')
         if confirmed.lower().strip() == 'n':
             quit()
             
@@ -28,18 +27,4 @@ except ValueError:
     quit()
 
 print("\nHere are 5 possible passwords!\n")
-
-password_list = []
-
-for i in range(10):
-    pword_generated = gen_password(dl)
-    print("Password", str(i + 1) + ':', pword_generated, "\n")
-    password_list.append(pword_generated)
-	
-if should_be_copied.strip().lower() == 'y':
-	pword_choice = int(input("Enter the number of the password you want to copy to your clipboard: "))
-	pyperclip.copy(password_list[pword_choice - 1])
-
-
-
 print("Thanks for using GenPass")
