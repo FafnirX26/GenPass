@@ -1,6 +1,6 @@
 # GenPass
 ## Latest Updates (1.3.0)
-_Removed pyperclip library_
+_Removed pyperclip library._
 That wasn't really an update, but it does remove some unusable libraries
 
 ## About
