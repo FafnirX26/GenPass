@@ -1,7 +1,7 @@
 import string, random, sys
 
 print("Welcome to GenPass\n")
-print("You are currently using GenPass 1.3.0\n")
+print("You are currently using GenPass 1.3.7\n")
 
 def gen_password(length):
     password = ''
