@@ -1,7 +1,6 @@
 # GenPass
-## Latest Updates (1.3.0)
-_Removed pyperclip library._
-That wasn't really an update, but it does remove some unusable libraries
+## Latest Update (1.3.7)
+_Replaced quit() with sys.exit() for a better experience. Rewrote critical missing portions of the program after messy removal of "pyperclip" lib usage. Changed user menu for better experience._
 
 ## About
 GenPass was originally written for a fun project with Python 3. Written on replit before moved to GitHub. 
