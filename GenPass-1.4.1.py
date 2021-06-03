@@ -1,7 +1,7 @@
 import string, random, sys, json
 data = open("data.json", "W")
 print("Welcome to GenPass\n")
-print("You are currently using GenPass 1.3.7\n")
+print("You are currently using GenPass 1.4.1\n")
 
 def gen_password(length):
     password = ''
