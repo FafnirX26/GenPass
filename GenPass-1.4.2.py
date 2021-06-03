@@ -1,5 +1,5 @@
 import string, random, sys, json
-data = open("data.json", "W")
+data = open("data.json", "w")
 print("Welcome to GenPass\n")
 print("You are currently using GenPass 1.4.1\n")
 
@@ -37,7 +37,7 @@ for i in range(num_of_pwords):
     print("Password",str(i + 1),pword,'\n')
     passwords_generated.append(pword)
 
-pword_choice = passwords_generated[int(input('Enter the number of your choice: '))]
+pword_choice = passwords_generated[int(input('Enter the number of your choice: '))-1]
 site_name = input('Enter the site name where this password will be used: ')
 uname = input('What username have you chose for this site: ')
 
@@ -46,6 +46,6 @@ curr_pword_full_details = {
     "pw": pword_choice,
     "sn": site_name
 }
-data.write(json.dumps(curr_pword_full_details))
+data.write(json.dumps(curr_pword_full_details) + '\n')
 print("Your data has been saved locally.")
 print("Thanks for using GenPass.")
